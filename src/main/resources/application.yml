@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: server
+  jpa:
+    show-sql: true
+  #  hibernate:
+  #    ddl-auto: create-drop
+  #datasource:
+  #  url: jdbc:postgresql://localhost:5432/mfk
+  #  username: postgres
+  #  password: mysecretpassword
+server:
+  port: 8080
