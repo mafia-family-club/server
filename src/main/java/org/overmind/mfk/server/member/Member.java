@@ -1,9 +1,11 @@
 package org.overmind.mfk.server.member;
 
 import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Column;
@@ -19,6 +21,7 @@ import javax.persistence.Id;
  */
 @Entity(name = "members")
 @Data
+@RequiredArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PACKAGE)
 public class Member {
 
@@ -27,12 +30,15 @@ public class Member {
     @Setter(AccessLevel.NONE)
     private Long id;
 
+    @NonNull
     @Column(length = 32)
     private String name;
 
+    @NonNull
     @Column(length = 32)
     private String surname;
 
+    @NonNull
     @Column(length = 20)
     @Enumerated(EnumType.STRING)
     private Gender gender;
