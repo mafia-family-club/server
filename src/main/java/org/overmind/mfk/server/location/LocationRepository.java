@@ -1,6 +1,5 @@
 package org.overmind.mfk.server.location;
 
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;
 
 import java.util.List;
@@ -15,9 +14,6 @@ public interface LocationRepository extends Repository<Location, Long> {
     List<Location> findAll();
 
     Optional<Location> findOne(Long id);
-
-    @Query("SELECT l FROM locations l where l.byDefault = true")
-    Optional<Location> findDefault();
 
     Location save(Location member);
 }

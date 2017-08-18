@@ -35,11 +35,6 @@ public class LocationController {
         return locationService.findOne(id);
     }
 
-    @GetMapping(path = "default")
-    public Location findDefault() throws LocationNotFoundException {
-        return locationService.findDefault();
-    }
-
     @PostMapping
     public Location save(@RequestBody Location location) {
         return locationService.save(location);

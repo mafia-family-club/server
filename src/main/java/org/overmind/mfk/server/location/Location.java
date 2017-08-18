@@ -32,8 +32,4 @@ public class Location {
     @Embedded
     private Geolocation geolocation;
 
-    @JsonProperty("default")
-    @Column(unique = true)
-    private Boolean byDefault;
-
 }

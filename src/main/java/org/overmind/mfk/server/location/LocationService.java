@@ -28,11 +28,6 @@ public class LocationService {
             );
     }
 
-    Location findDefault() throws LocationNotFoundException {
-        return repository.findDefault()
-            .orElseThrow(() -> new LocationNotFoundException("Default location doesn't exist"));
-    }
-
     Location save(Location location) {
         return repository.save(location);
     }
