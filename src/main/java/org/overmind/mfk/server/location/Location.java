@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.Setter;
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Parameter;
 
 import javax.persistence.Column;
 import javax.persistence.Embedded;
@@ -22,7 +24,14 @@ import javax.persistence.Id;
 public class Location {
 
     @Id
-    @GeneratedValue
+    @GenericGenerator(
+        name = "location_generator",
+        strategy = "org.hibernate.id.enhanced.SequenceStyleGenerator",
+        parameters = {
+            @Parameter(name = "sequence_name", value = "locations_id_seq")
+        }
+    )
+    @GeneratedValue(generator = "location_generator")
     @Setter(AccessLevel.NONE)
     private Long id;
 

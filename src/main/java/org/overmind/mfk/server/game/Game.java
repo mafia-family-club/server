@@ -4,6 +4,8 @@ import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Parameter;
 import org.overmind.mfk.server.meeting.Meeting;
 import org.overmind.mfk.server.member.Member;
 
@@ -30,8 +32,15 @@ import java.util.List;
 public class Game {
 
     @Id
+    @GenericGenerator(
+        name = "game_generator",
+        strategy = "org.hibernate.id.enhanced.SequenceStyleGenerator",
+        parameters = {
+            @Parameter(name = "sequence_name", value = "games_id_seq")
+        }
+    )
+    @GeneratedValue(generator = "game_generator")
     @Setter(AccessLevel.NONE)
-    @GeneratedValue
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)

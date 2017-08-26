@@ -5,6 +5,8 @@ import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Parameter;
 import org.overmind.mfk.server.location.Location;
 
 import javax.persistence.Column;
@@ -24,7 +26,14 @@ import java.time.LocalDateTime;
 public class Meeting {
 
     @Id
-    @GeneratedValue
+    @GenericGenerator(
+        name = "meeting_generator",
+        strategy = "org.hibernate.id.enhanced.SequenceStyleGenerator",
+        parameters = {
+            @Parameter(name = "sequence_name", value = "meetings_id_seq")
+        }
+    )
+    @GeneratedValue(generator = "meeting_generator")
     @Setter(AccessLevel.NONE)
     private Long id;
 
