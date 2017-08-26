@@ -1,9 +1,9 @@
 package org.overmind.mfk.server.location;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
 import lombok.Setter;
 
 import javax.persistence.Column;
@@ -26,9 +26,11 @@ public class Location {
     @Setter(AccessLevel.NONE)
     private Long id;
 
+    @NonNull
     @Column(length = 63)
     private String name;
 
+    @NonNull
     @Embedded
     private Geolocation geolocation;
 

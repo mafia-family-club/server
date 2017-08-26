@@ -4,6 +4,7 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
 
 import javax.persistence.Embeddable;
 
@@ -17,8 +18,10 @@ import javax.persistence.Embeddable;
 @Embeddable
 class Geolocation {
 
+    @NonNull
     private String url;
 
+    @NonNull
     private String address;
 
 }
