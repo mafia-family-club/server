@@ -7,6 +7,7 @@ stages:
 
 before_script:
   - chmod +x gradlew
+  - docker info
 
 build:
   stage: build
