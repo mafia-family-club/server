@@ -23,7 +23,6 @@ public class MonthOfMeetings {
     @NonNull
     private DayOfWeek firstDayOfWeek;
 
-    @NonNull
     private int daysCount;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
