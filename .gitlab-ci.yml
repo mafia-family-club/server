@@ -1,9 +1,12 @@
 image: overmind024/java
 
 stages:
-    - build
-    - test
-    - build_docker
+  - build
+  - test
+  - build_docker
+    
+services:
+  - docker:dind
 
 before_script:
   - chmod +x gradlew
