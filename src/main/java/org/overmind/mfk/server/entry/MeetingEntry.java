@@ -23,7 +23,7 @@ import java.time.LocalDateTime;
 @Data
 @Entity(name = "meetings")
 @NoArgsConstructor(access = AccessLevel.PACKAGE)
-public class Meeting {
+public class MeetingEntry {
 
     @Id
     @GenericGenerator(

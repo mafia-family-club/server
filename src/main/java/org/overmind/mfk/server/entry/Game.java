@@ -43,7 +43,7 @@ public class Game {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "meeting_id")
-    private Meeting meeting;
+    private MeetingEntry meeting;
 
     @Column(length = 20)
     @Enumerated(EnumType.STRING)

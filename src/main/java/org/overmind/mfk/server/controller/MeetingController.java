@@ -1,6 +1,6 @@
 package org.overmind.mfk.server.controller;
 
-import org.overmind.mfk.server.entry.Meeting;
+import org.overmind.mfk.server.entry.MeetingEntry;
 import org.overmind.mfk.server.exception.MeetingNotFoundException;
 import org.overmind.mfk.server.service.MeetingService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,17 +29,17 @@ public class MeetingController {
     }
 
     @GetMapping
-    public List<Meeting> findAll() {
+    public List<MeetingEntry> findAll() {
         return meetingService.findAll();
     }
 
     @GetMapping(path = "{id}")
-    public Meeting findOne(@PathVariable("id") Long id) throws MeetingNotFoundException {
+    public MeetingEntry findOne(@PathVariable("id") Long id) throws MeetingNotFoundException {
         return meetingService.findOne(id);
     }
 
     @PostMapping
-    public Meeting save(@RequestBody Meeting meeting) {
+    public MeetingEntry save(@RequestBody MeetingEntry meeting) {
         return meetingService.save(meeting);
     }
 

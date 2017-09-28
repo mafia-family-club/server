@@ -14,7 +14,7 @@ import java.util.List;
 @Service
 public class LocationService {
 
-    private LocationRepository repository;
+    private final LocationRepository repository;
 
     public LocationService(LocationRepository repository) {
         this.repository = repository;
