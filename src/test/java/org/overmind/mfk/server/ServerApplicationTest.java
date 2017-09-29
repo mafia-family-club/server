@@ -14,8 +14,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class ServerApplicationTest {
 
     @Test
-    public void contextLoad() throws Exception {
-
-    }
+    public void contextLoad() throws Exception {}
 
 }
