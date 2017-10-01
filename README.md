@@ -1,4 +1,4 @@
-[![Build Status](http://jenkins.overmind024.com/job/server/badge/icon)](http://jenkins.overmind024.com/job/server/)
+[![Build Status](http://jenkins.overmind024.com/job/mafia-family-club/job/server/badge/icon)](http://jenkins.overmind024.com/job/mafia-family-club/job/server/)
 
 # Server
 
