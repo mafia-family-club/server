@@ -1,3 +1,5 @@
+import java.security.MessageDigest
+
 buildscript {
     ext {
         springBootVersion = '1.5.3.RELEASE'
@@ -44,12 +46,14 @@ task wrapper(type: Wrapper) {
 }
 
 task buildDocker(type: Docker, dependsOn: build) {
-    tag = "mafiafamilyclub/${jar.baseName}"
-    dockerfile = file('Dockerfile')
+    tag = "mafiafamilyclub/server"
+    dockerfile = file('src/main/docker/Dockerfile')
     doFirst {
         copy {
             from jar
             into "${stageDir}/target"
         }
     }
+
+    push = true
 }
