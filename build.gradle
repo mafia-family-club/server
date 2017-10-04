@@ -9,13 +9,13 @@ buildscript {
 
 plugins {
     id 'java'
-    id "org.springframework.boot" version "1.5.3.RELEASE"
+    id 'org.springframework.boot' version '1.5.3.RELEASE'
+    id 'com.zoltu.git-versioning' version '3.0.3'
 }
 
 apply plugin: 'docker'
 
 group = 'mafia-family-club'
-version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
