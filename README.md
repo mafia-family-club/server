@@ -1,4 +1,4 @@
-[![Build Status](http://jenkins.overmind024.com/job/mafia-family-club/job/server/badge/icon)](http://jenkins.overmind024.com/job/mafia-family-club/job/server/)
+[![pipeline status](https://gitlab.com/mafia-family-club/server/badges/master/pipeline.svg)](https://gitlab.com/mafia-family-club/server/commits/master)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](/LICENSE.md)
 
 # Server
